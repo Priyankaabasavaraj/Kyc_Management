@@ -1,7 +1,5 @@
 package com.spring.controller;
 
-public class SD_KYC_GROUPS_Controller {
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +12,14 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kyc.bean.SD_KYC_FIELD_TYPES_Bean;
-import com.kyc.entity.SD_KYC_FIELD_MASTER;
-import com.kyc.entity.SD_KYC_FIELD_TYPES;
-import com.kyc.repository.SD_KYC_FIELD_TYPES_Repository;
-import com.kyc.service.SD_KYC_FIELD_TYPES_Service;
+import com.springbot.model.SD_KYC_FIELD_TYPES;
+import com.springbot.repository.SD_KYC_FIELD_TYPES_Repository;
+import com.springbot.service.SD_KYC_FIELD_TYPES_Service;
+
+
 
 @RestController
-public class SD_KYC_FIELD_TYPES_Controller {
+public class SD_KYC_GROUPS_Controller {
 
 	@Autowired
 	private SD_KYC_FIELD_TYPES_Service service;
@@ -29,25 +27,25 @@ public class SD_KYC_FIELD_TYPES_Controller {
 	@Autowired
 	private SD_KYC_FIELD_TYPES_Repository repo;
 	
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/SD_KYC_FIELD_TYPES/add")
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/SD_KYC_GROUPS_TYPES/add")
 	public SD_KYC_FIELD_TYPES insert(@RequestBody SD_KYC_FIELD_TYPES master)
 	{
 		return service.add(master);
 	}
 	
-	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/SD_KYC_FIELD_TYPES/update")
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/SD_KYC_GROUPS_TYPES/update")
 	public SD_KYC_FIELD_TYPES update(@RequestBody SD_KYC_FIELD_TYPES master)
 	{
 		return service.update(master);
 	}
 	
-	@DeleteMapping(path ="/SD_KYC_FIELD_TYPES/delete/{id}")
+	@DeleteMapping(path ="/SD_KYC_GROUPS_TYPES/delete/{id}")
 	public String deleteAddress(@PathVariable int id)
 	{
 		return service.delete(id);
 	}
 	
-	@GetMapping(value="/SD_KYC_FIELD_TYPES/find/{id}")
+	@GetMapping(value="/SD_KYC_GROUPS_TYPES/find/{id}")
 	public SD_KYC_FIELD_TYPES findbyId(@PathVariable int id){
 
 		if(repo.findById(id).isPresent())

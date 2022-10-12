@@ -1,9 +1,5 @@
 package com.spring.controller;
 
-public class SD_KYC_FIELD_TYPES_Controller {
-
-}
-package com.kyc.controller;
 
 import java.util.List;
 
@@ -17,11 +13,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kyc.bean.SD_KYC_FIELD_TYPES_Bean;
-import com.kyc.entity.SD_KYC_FIELD_MASTER;
-import com.kyc.entity.SD_KYC_FIELD_TYPES;
-import com.kyc.repository.SD_KYC_FIELD_TYPES_Repository;
-import com.kyc.service.SD_KYC_FIELD_TYPES_Service;
+import com.springbot.model.SD_KYC_FIELD_TYPES;
+import com.springbot.repository.SD_KYC_FIELD_TYPES_Repository;
+import com.springbot.service.SD_KYC_FIELD_TYPES_Service;
+
+
 
 @RestController
 public class SD_KYC_FIELD_TYPES_Controller {

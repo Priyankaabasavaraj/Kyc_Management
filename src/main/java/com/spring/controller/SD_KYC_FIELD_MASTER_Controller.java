@@ -14,6 +14,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.springbot.model.SD_KYC_FIELD_MASTER;
+import com.springbot.repository.SD_KYC_FIELD_MASTER_Repository;
+import com.springbot.service.SD_KYC_FIELD_MASTER_Service;
+
 
 
 @RestController

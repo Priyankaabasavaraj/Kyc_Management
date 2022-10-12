@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -28,12 +29,13 @@ public class SD_KYC_FIELD_MASTER {
 	@Column(name="FIELD_NAME",nullable = false)
 	private String name;
 	
+	@ManyToOne(cascade =CascadeType.ALL )
+	@JoinColumn(name="FIELD_TYPE",referencedColumnName = "ID" ,nullable = false)
+	private  SD_KYC_FIELD_TYPES fieldType;
 	
-	@Column(name="FIELD_TYPE",nullable = false)
-	private Integer fieldType;
-	
-	@Column(name="TAG_TYPE",nullable = false)
-	private Integer tagType;
+	@ManyToOne(cascade =CascadeType.ALL )
+	@JoinColumn(name="TAG_TYPE",referencedColumnName = "ID" ,nullable = false)
+	private  SD_KYC_GROUPS tagType;
 
 	@Column(name="DROPDOWN",nullable = false)
 	private String dropdown;
@@ -54,19 +56,19 @@ public class SD_KYC_FIELD_MASTER {
 		this.name = name;
 	}
 
-	public Integer getFieldType() {
+	public SD_KYC_FIELD_TYPES getFieldType() {
 		return fieldType;
 	}
 
-	public void setFieldType(Integer fieldType) {
+	public void setFieldType(SD_KYC_FIELD_TYPES fieldType) {
 		this.fieldType = fieldType;
 	}
 
-	public Integer getTagType() {
+	public SD_KYC_GROUPS getTagType() {
 		return tagType;
 	}
 
-	public void setTagType(Integer tagType) {
+	public void setTagType(SD_KYC_GROUPS tagType) {
 		this.tagType = tagType;
 	}
 
@@ -78,7 +80,7 @@ public class SD_KYC_FIELD_MASTER {
 		this.dropdown = dropdown;
 	}
 
-	public SD_KYC_FIELD_MASTER(Integer id, String name, Integer fieldType, Integer tagType,
+	public SD_KYC_FIELD_MASTER(Integer id, String name, SD_KYC_FIELD_TYPES fieldType, SD_KYC_GROUPS tagType,
 			String dropdown) {
 		super();
 		this.id = id;
@@ -92,11 +94,7 @@ public class SD_KYC_FIELD_MASTER {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-	/*@OneToMany(cascade=CascadeType.ALL)//,fetch=FetchType.EAGER)//Manytoone since many employe belong to one department
-	@JoinColumn(name="EMPADDRES_ID",referencedColumnName = "ID",nullable = false)
-	private List<SD_KYC_FIELD_TYPES> fieldType;*/
-	
+
 	
 
 }
