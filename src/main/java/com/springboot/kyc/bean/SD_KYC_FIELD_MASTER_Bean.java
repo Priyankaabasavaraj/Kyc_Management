@@ -3,8 +3,9 @@ package com.springboot.kyc.bean;
 
 import java.util.List;
 
-import com.springbot.model.SD_KYC_FIELD_TYPES;
-import com.springbot.model.SD_KYC_GROUPS;
+
+import com.springboot.kyc.model.SD_KYC_FIELD_TYPES;
+import com.springboot.kyc.model.SD_KYC_GROUPS;
 
 public class SD_KYC_FIELD_MASTER_Bean {
 	

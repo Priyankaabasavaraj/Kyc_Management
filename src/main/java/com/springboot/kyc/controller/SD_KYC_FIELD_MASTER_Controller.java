@@ -1,6 +1,8 @@
-package com.spring.controller;
+package com.springboot.kyc.controller;
 
 import java.util.List;
+
+
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +16,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springbot.model.SD_KYC_FIELD_MASTER;
-import com.springbot.repository.SD_KYC_FIELD_MASTER_Repository;
-import com.springbot.service.SD_KYC_FIELD_MASTER_Service;
+import com.springboot.kyc.model.SD_KYC_FIELD_MASTER;
+import com.springboot.kyc.repository.SD_KYC_FIELD_MASTER_Repository;
+import com.springboot.kyc.service.SD_KYC_FIELD_MASTER_Service;
+
+
+
 
 
 
@@ -29,25 +34,25 @@ public class SD_KYC_FIELD_MASTER_Controller {
 	@Autowired
 	private SD_KYC_FIELD_MASTER_Repository repo;
 
-	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/add")
+	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/kyc_add")
 	public SD_KYC_FIELD_MASTER insert(@RequestBody SD_KYC_FIELD_MASTER master)
 	{
 		return service.add(master);
 	}
 	
-	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/update")
+	@PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,value = "/kyc_update")
 	public SD_KYC_FIELD_MASTER update(@RequestBody SD_KYC_FIELD_MASTER master)
 	{
 		return service.update(master);
 	}
 	
-	@DeleteMapping(path ="/delete/{id}")
+	@DeleteMapping(path ="/kyc_delete/{id}")
 	public String deleteAddress(@PathVariable int id)
 	{
 		return service.delete(id);
 	}
 	
-	@GetMapping(value="/find/{id}")
+	@GetMapping(value="/kyc_find/{id}")
 	public SD_KYC_FIELD_MASTER findbyId(@PathVariable int id){
 
 		if(repo.findById(id).isPresent())
@@ -58,7 +63,7 @@ public class SD_KYC_FIELD_MASTER_Controller {
 			return null;
 	}
 	
-	@GetMapping(value="/find")
+	@GetMapping(value="/kyc_find")
 	public List<SD_KYC_FIELD_MASTER> findAllbyId(){
 		return repo.findAll();
 	}

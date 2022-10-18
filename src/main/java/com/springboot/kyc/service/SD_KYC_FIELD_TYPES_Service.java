@@ -1,6 +1,6 @@
-package com.springbot.service;
+package com.springboot.kyc.service;
 
-import com.springbot.model.SD_KYC_FIELD_TYPES;
+import com.springboot.kyc.model.SD_KYC_FIELD_TYPES;
 
 public interface SD_KYC_FIELD_TYPES_Service {
 	public SD_KYC_FIELD_TYPES add(SD_KYC_FIELD_TYPES master);

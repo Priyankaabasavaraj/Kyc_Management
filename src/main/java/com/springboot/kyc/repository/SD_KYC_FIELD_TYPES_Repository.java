@@ -1,8 +1,8 @@
-package com.springbot.repository;
+package com.springboot.kyc.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.springbot.model.SD_KYC_FIELD_TYPES;
+import com.springboot.kyc.model.SD_KYC_FIELD_TYPES;
 
 
 

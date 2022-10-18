@@ -1,11 +1,11 @@
-package com.springbot.service;
+package com.springboot.kyc.service;
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.springbot.model.SD_KYC_FIELD_TYPES;
-import com.springbot.repository.SD_KYC_FIELD_TYPES_Repository;
+import com.springboot.kyc.model.SD_KYC_FIELD_TYPES;
+import com.springboot.kyc.repository.SD_KYC_FIELD_TYPES_Repository;
 
 
 @Transactional

@@ -1,4 +1,4 @@
-package com.springbot.model;
+package com.springboot.kyc.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

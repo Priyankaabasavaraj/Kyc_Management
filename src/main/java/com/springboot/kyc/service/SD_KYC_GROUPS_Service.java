@@ -1,6 +1,6 @@
-package com.springbot.service;
+package com.springboot.kyc.service;
 
-import com.springbot.model.SD_KYC_GROUPS;
+import com.springboot.kyc.model.SD_KYC_GROUPS;
 
 public interface SD_KYC_GROUPS_Service {
 	public SD_KYC_GROUPS add(SD_KYC_GROUPS master);

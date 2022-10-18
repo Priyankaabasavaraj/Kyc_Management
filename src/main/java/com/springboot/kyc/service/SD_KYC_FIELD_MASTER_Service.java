@@ -1,6 +1,6 @@
-package com.springbot.service;
+package com.springboot.kyc.service;
 
-import com.springbot.model.SD_KYC_FIELD_MASTER;
+import com.springboot.kyc.model.SD_KYC_FIELD_MASTER;
 
 public interface SD_KYC_FIELD_MASTER_Service {
 
